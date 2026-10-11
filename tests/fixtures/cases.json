@@ -4,8 +4,9 @@
     {
       "id": "F01",
       "spec_sections": [
-        "4",
-        "9"
+        "2",
+        "3",
+        "7"
       ],
       "input": "sales.csv",
       "mode": "export",
@@ -34,8 +35,9 @@
     {
       "id": "F02",
       "spec_sections": [
-        "4",
-        "9"
+        "2",
+        "3",
+        "7"
       ],
       "input": "sales.csv",
       "mode": "export",
@@ -71,8 +73,8 @@
     {
       "id": "F03",
       "spec_sections": [
-        "4",
-        "9"
+        "3",
+        "7"
       ],
       "input": "quoted.csv",
       "mode": "export",
@@ -112,7 +114,7 @@
       "id": "F04",
       "spec_sections": [
         "4",
-        "9"
+        "7"
       ],
       "input": "sales.csv",
       "mode": "aggregate",
@@ -174,7 +176,7 @@
       "id": "F05",
       "spec_sections": [
         "4",
-        "9"
+        "7"
       ],
       "input": "sales.csv",
       "mode": "aggregate",
@@ -223,8 +225,9 @@
     {
       "id": "F06",
       "spec_sections": [
+        "3",
         "4",
-        "9"
+        "7"
       ],
       "input": "numbers.csv",
       "mode": "aggregate",
@@ -274,7 +277,7 @@
       "id": "F07",
       "spec_sections": [
         "4",
-        "9"
+        "7"
       ],
       "input": "header_only.csv",
       "mode": "aggregate",
@@ -324,7 +327,7 @@
       "id": "F08",
       "spec_sections": [
         "4",
-        "9"
+        "7"
       ],
       "input": "header_only.csv",
       "mode": "aggregate",
@@ -347,8 +350,8 @@
     {
       "id": "F09",
       "spec_sections": [
-        "4",
-        "9"
+        "3",
+        "7"
       ],
       "input": "header_only.csv",
       "mode": "export",
@@ -366,8 +369,9 @@
     {
       "id": "F10",
       "spec_sections": [
-        "4",
-        "9"
+        "2",
+        "3",
+        "7"
       ],
       "input": "quoted.csv",
       "mode": "export",
@@ -396,8 +400,8 @@
     {
       "id": "F11",
       "spec_sections": [
-        "4",
-        "9"
+        "3",
+        "7"
       ],
       "input": "short_circuit.csv",
       "mode": "export",
@@ -434,9 +438,9 @@
     {
       "id": "F12",
       "spec_sections": [
-        "4",
-        "8",
-        "9"
+        "3",
+        "6",
+        "7"
       ],
       "input": "short_circuit.csv",
       "mode": "export",
@@ -461,9 +465,9 @@
     {
       "id": "F13",
       "spec_sections": [
-        "4",
-        "8",
-        "9"
+        "3",
+        "6",
+        "7"
       ],
       "input": "invalid_number.csv",
       "mode": "aggregate",
@@ -481,9 +485,9 @@
     {
       "id": "F14",
       "spec_sections": [
-        "4",
-        "8",
-        "9"
+        "3",
+        "6",
+        "7"
       ],
       "input": "empty_number.csv",
       "mode": "export",
@@ -503,9 +507,9 @@
     {
       "id": "F15",
       "spec_sections": [
-        "4",
-        "8",
-        "9"
+        "3",
+        "6",
+        "7"
       ],
       "input": "bad_width.csv",
       "mode": "export",
@@ -525,9 +529,9 @@
     {
       "id": "F16",
       "spec_sections": [
-        "4",
-        "8",
-        "9"
+        "3",
+        "6",
+        "7"
       ],
       "input": "bad_quote.csv",
       "mode": "export",
@@ -541,9 +545,9 @@
     {
       "id": "F17",
       "spec_sections": [
-        "4",
-        "8",
-        "9"
+        "3",
+        "6",
+        "7"
       ],
       "input": "bad_multiline.csv",
       "mode": "export",
@@ -557,9 +561,9 @@
     {
       "id": "F18",
       "spec_sections": [
-        "4",
-        "8",
-        "9"
+        "3",
+        "6",
+        "7"
       ],
       "input": "bad_duplicate_header.csv",
       "mode": "export",
@@ -573,9 +577,9 @@
     {
       "id": "F19",
       "spec_sections": [
-        "4",
-        "8",
-        "9"
+        "3",
+        "6",
+        "7"
       ],
       "input": "bad_empty_header.csv",
       "mode": "export",
@@ -589,9 +593,9 @@
     {
       "id": "F20",
       "spec_sections": [
-        "4",
-        "8",
-        "9"
+        "3",
+        "6",
+        "7"
       ],
       "input": "empty.csv",
       "mode": "export",
@@ -604,9 +608,9 @@
     {
       "id": "F21",
       "spec_sections": [
-        "4",
-        "8",
-        "9"
+        "5",
+        "6",
+        "7"
       ],
       "input": "groups.csv",
       "mode": "aggregate",
@@ -626,8 +630,9 @@
     {
       "id": "F22",
       "spec_sections": [
+        "3",
         "4",
-        "9"
+        "7"
       ],
       "input": "invalid_number.csv",
       "mode": "aggregate",
@@ -651,8 +656,8 @@
     {
       "id": "F23",
       "spec_sections": [
-        "4",
-        "9"
+        "3",
+        "7"
       ],
       "input": "crlf.csv",
       "mode": "export",
@@ -679,8 +684,8 @@
     {
       "id": "F24",
       "spec_sections": [
-        "4",
-        "9"
+        "3",
+        "7"
       ],
       "input": "bom.csv",
       "mode": "export",
@@ -703,8 +708,8 @@
     {
       "id": "F25",
       "spec_sections": [
-        "4",
-        "9"
+        "3",
+        "7"
       ],
       "input": "no_final_newline.csv",
       "mode": "export",
@@ -727,8 +732,9 @@
     {
       "id": "F26",
       "spec_sections": [
-        "4",
-        "9"
+        "5",
+        "6",
+        "7"
       ],
       "input": "groups.csv",
       "mode": "aggregate",
@@ -771,7 +777,7 @@
       "id": "F27",
       "spec_sections": [
         "4",
-        "9"
+        "7"
       ],
       "input": "sales.csv",
       "mode": "aggregate",
@@ -800,7 +806,7 @@
       "id": "F28",
       "spec_sections": [
         "4",
-        "9"
+        "7"
       ],
       "input": "sales.csv",
       "mode": "aggregate",
