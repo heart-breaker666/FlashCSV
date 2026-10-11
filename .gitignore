@@ -1,0 +1,7 @@
+/build/
+/build-*/
+/data/
+/reports/
+/compile_commands.json
+__pycache__/
+*.py[cod]

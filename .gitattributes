@@ -1,0 +1,3 @@
+# 保留 CRLF、BOM 和无末尾换行的验收输入字节。
+tests/fixtures/*.csv -text
+tests/fixtures/crlf.csv whitespace=cr-at-eol

@@ -1,0 +1,855 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "F01",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "sales.csv",
+      "mode": "export",
+      "args": [
+        "--where",
+        "amount",
+        "num",
+        "gt",
+        "100"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "city",
+          "amount"
+        ],
+        "rows": [
+          [
+            "上海",
+            "200"
+          ]
+        ],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F02",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "sales.csv",
+      "mode": "export",
+      "args": [
+        "--select",
+        "amount",
+        "--select",
+        "city"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "amount",
+          "city"
+        ],
+        "rows": [
+          [
+            "100",
+            "上海"
+          ],
+          [
+            "80",
+            "北京"
+          ],
+          [
+            "200",
+            "上海"
+          ]
+        ],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F03",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "quoted.csv",
+      "mode": "export",
+      "args": [],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "id",
+          "city",
+          "note",
+          "amount"
+        ],
+        "rows": [
+          [
+            "001",
+            "North,Zone",
+            "said \"hello\"",
+            "100"
+          ],
+          [
+            "002",
+            "South",
+            "",
+            "80"
+          ],
+          [
+            "003",
+            "North",
+            " plain ",
+            "200"
+          ]
+        ],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F04",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "sales.csv",
+      "mode": "aggregate",
+      "args": [
+        "--group-by",
+        "city",
+        "--agg",
+        "count",
+        "--agg",
+        "sum",
+        "amount",
+        "--agg",
+        "min",
+        "amount",
+        "--agg",
+        "max",
+        "amount",
+        "--agg",
+        "avg",
+        "amount"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "city",
+          "count",
+          "sum(amount)",
+          "min(amount)",
+          "max(amount)",
+          "avg(amount)"
+        ],
+        "rows": [
+          [
+            "上海",
+            "2",
+            "300",
+            "100",
+            "200",
+            "150"
+          ],
+          [
+            "北京",
+            "1",
+            "80",
+            "80",
+            "80",
+            "80"
+          ]
+        ],
+        "numeric_columns": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "id": "F05",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "sales.csv",
+      "mode": "aggregate",
+      "args": [
+        "--agg",
+        "count",
+        "--agg",
+        "sum",
+        "amount",
+        "--agg",
+        "min",
+        "amount",
+        "--agg",
+        "max",
+        "amount",
+        "--agg",
+        "avg",
+        "amount"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "count",
+          "sum(amount)",
+          "min(amount)",
+          "max(amount)",
+          "avg(amount)"
+        ],
+        "rows": [
+          [
+            "3",
+            "380",
+            "80",
+            "200",
+            "126.66666666666667"
+          ]
+        ],
+        "numeric_columns": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "F06",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "numbers.csv",
+      "mode": "aggregate",
+      "args": [
+        "--agg",
+        "count",
+        "--agg",
+        "sum",
+        "amount",
+        "--agg",
+        "min",
+        "amount",
+        "--agg",
+        "max",
+        "amount",
+        "--agg",
+        "avg",
+        "amount"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "count",
+          "sum(amount)",
+          "min(amount)",
+          "max(amount)",
+          "avg(amount)"
+        ],
+        "rows": [
+          [
+            "4",
+            "2000",
+            "-1.5",
+            "2000",
+            "500"
+          ]
+        ],
+        "numeric_columns": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "F07",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "header_only.csv",
+      "mode": "aggregate",
+      "args": [
+        "--agg",
+        "count",
+        "--agg",
+        "sum",
+        "amount",
+        "--agg",
+        "min",
+        "amount",
+        "--agg",
+        "max",
+        "amount",
+        "--agg",
+        "avg",
+        "amount"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "count",
+          "sum(amount)",
+          "min(amount)",
+          "max(amount)",
+          "avg(amount)"
+        ],
+        "rows": [
+          [
+            "0",
+            "0",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "numeric_columns": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "F08",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "header_only.csv",
+      "mode": "aggregate",
+      "args": [
+        "--group-by",
+        "city",
+        "--agg",
+        "count"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "city",
+          "count"
+        ],
+        "rows": [],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F09",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "header_only.csv",
+      "mode": "export",
+      "args": [],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "city",
+          "amount"
+        ],
+        "rows": [],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F10",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "quoted.csv",
+      "mode": "export",
+      "args": [
+        "--select",
+        "id",
+        "--where",
+        "id",
+        "str",
+        "eq",
+        "001"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "id"
+        ],
+        "rows": [
+          [
+            "001"
+          ]
+        ],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F11",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "short_circuit.csv",
+      "mode": "export",
+      "args": [
+        "--select",
+        "id",
+        "--where",
+        "city",
+        "str",
+        "eq",
+        "上海",
+        "--where",
+        "amount",
+        "num",
+        "ge",
+        "100"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "id"
+        ],
+        "rows": [
+          [
+            "001"
+          ],
+          [
+            "003"
+          ]
+        ],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F12",
+      "spec_sections": [
+        "4",
+        "8",
+        "9"
+      ],
+      "input": "short_circuit.csv",
+      "mode": "export",
+      "args": [
+        "--where",
+        "amount",
+        "num",
+        "ge",
+        "100",
+        "--where",
+        "city",
+        "str",
+        "eq",
+        "上海"
+      ],
+      "expected": {
+        "exit_code": 1,
+        "error_kind": "invalid_number",
+        "error_line": 3
+      }
+    },
+    {
+      "id": "F13",
+      "spec_sections": [
+        "4",
+        "8",
+        "9"
+      ],
+      "input": "invalid_number.csv",
+      "mode": "aggregate",
+      "args": [
+        "--agg",
+        "sum",
+        "amount"
+      ],
+      "expected": {
+        "exit_code": 1,
+        "error_kind": "invalid_number",
+        "error_line": 3
+      }
+    },
+    {
+      "id": "F14",
+      "spec_sections": [
+        "4",
+        "8",
+        "9"
+      ],
+      "input": "empty_number.csv",
+      "mode": "export",
+      "args": [
+        "--where",
+        "amount",
+        "num",
+        "gt",
+        "0"
+      ],
+      "expected": {
+        "exit_code": 1,
+        "error_kind": "invalid_number",
+        "error_line": 3
+      }
+    },
+    {
+      "id": "F15",
+      "spec_sections": [
+        "4",
+        "8",
+        "9"
+      ],
+      "input": "bad_width.csv",
+      "mode": "export",
+      "args": [
+        "--where",
+        "city",
+        "str",
+        "eq",
+        "上海"
+      ],
+      "expected": {
+        "exit_code": 1,
+        "error_kind": "field_count",
+        "error_line": 3
+      }
+    },
+    {
+      "id": "F16",
+      "spec_sections": [
+        "4",
+        "8",
+        "9"
+      ],
+      "input": "bad_quote.csv",
+      "mode": "export",
+      "args": [],
+      "expected": {
+        "exit_code": 1,
+        "error_kind": "csv_syntax",
+        "error_line": 2
+      }
+    },
+    {
+      "id": "F17",
+      "spec_sections": [
+        "4",
+        "8",
+        "9"
+      ],
+      "input": "bad_multiline.csv",
+      "mode": "export",
+      "args": [],
+      "expected": {
+        "exit_code": 1,
+        "error_kind": "unsupported_multiline",
+        "error_line": 2
+      }
+    },
+    {
+      "id": "F18",
+      "spec_sections": [
+        "4",
+        "8",
+        "9"
+      ],
+      "input": "bad_duplicate_header.csv",
+      "mode": "export",
+      "args": [],
+      "expected": {
+        "exit_code": 1,
+        "error_kind": "duplicate_header",
+        "error_line": 1
+      }
+    },
+    {
+      "id": "F19",
+      "spec_sections": [
+        "4",
+        "8",
+        "9"
+      ],
+      "input": "bad_empty_header.csv",
+      "mode": "export",
+      "args": [],
+      "expected": {
+        "exit_code": 1,
+        "error_kind": "empty_header",
+        "error_line": 1
+      }
+    },
+    {
+      "id": "F20",
+      "spec_sections": [
+        "4",
+        "8",
+        "9"
+      ],
+      "input": "empty.csv",
+      "mode": "export",
+      "args": [],
+      "expected": {
+        "exit_code": 1,
+        "error_kind": "missing_header"
+      }
+    },
+    {
+      "id": "F21",
+      "spec_sections": [
+        "4",
+        "8",
+        "9"
+      ],
+      "input": "groups.csv",
+      "mode": "aggregate",
+      "args": [
+        "--group-by",
+        "key",
+        "--agg",
+        "count",
+        "--max-groups",
+        "3"
+      ],
+      "expected": {
+        "exit_code": 1,
+        "error_kind": "group_limit"
+      }
+    },
+    {
+      "id": "F22",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "invalid_number.csv",
+      "mode": "aggregate",
+      "args": [
+        "--agg",
+        "count"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "count"
+        ],
+        "rows": [
+          [
+            "2"
+          ]
+        ],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F23",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "crlf.csv",
+      "mode": "export",
+      "args": [],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "city",
+          "amount"
+        ],
+        "rows": [
+          [
+            "A",
+            "100"
+          ],
+          [
+            "B",
+            "80"
+          ]
+        ],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F24",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "bom.csv",
+      "mode": "export",
+      "args": [],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "city",
+          "amount"
+        ],
+        "rows": [
+          [
+            "A",
+            "100"
+          ]
+        ],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F25",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "no_final_newline.csv",
+      "mode": "export",
+      "args": [],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "city",
+          "amount"
+        ],
+        "rows": [
+          [
+            "A",
+            "100"
+          ]
+        ],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F26",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "groups.csv",
+      "mode": "aggregate",
+      "args": [
+        "--group-by",
+        "key",
+        "--agg",
+        "count",
+        "--max-groups",
+        "4"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "key",
+          "count"
+        ],
+        "rows": [
+          [
+            "A",
+            "1"
+          ],
+          [
+            "B",
+            "1"
+          ],
+          [
+            "C",
+            "1"
+          ],
+          [
+            "D",
+            "1"
+          ]
+        ],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F27",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "sales.csv",
+      "mode": "aggregate",
+      "args": [
+        "--group-by",
+        "city",
+        "--agg",
+        "count",
+        "--where",
+        "amount",
+        "num",
+        "gt",
+        "1000"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "city",
+          "count"
+        ],
+        "rows": [],
+        "numeric_columns": []
+      }
+    },
+    {
+      "id": "F28",
+      "spec_sections": [
+        "4",
+        "9"
+      ],
+      "input": "sales.csv",
+      "mode": "aggregate",
+      "args": [
+        "--agg",
+        "count",
+        "--agg",
+        "sum",
+        "amount",
+        "--agg",
+        "min",
+        "amount",
+        "--agg",
+        "max",
+        "amount",
+        "--agg",
+        "avg",
+        "amount",
+        "--where",
+        "amount",
+        "num",
+        "gt",
+        "1000"
+      ],
+      "expected": {
+        "exit_code": 0,
+        "header": [
+          "count",
+          "sum(amount)",
+          "min(amount)",
+          "max(amount)",
+          "avg(amount)"
+        ],
+        "rows": [
+          [
+            "0",
+            "0",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "numeric_columns": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    }
+  ]
+}
