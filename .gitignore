@@ -1,7 +1,14 @@
 /build/
 /build-*/
 /data/
-/reports/
+/reports/*
+!/reports/baseline-20261012/
+/reports/baseline-20261012/*
+!/reports/baseline-20261012/summary.md
+!/reports/baseline-20261012/summary.json
+!/reports/baseline-20261012/runs.json
+!/reports/baseline-20261012/environment.json
+!/reports/baseline-20261012/build-info.json
 /compile_commands.json
 __pycache__/
 *.py[cod]

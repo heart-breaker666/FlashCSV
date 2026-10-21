@@ -1,0 +1,178 @@
+[
+  {
+    "rows": 100000,
+    "groups": 1000,
+    "padding": 0,
+    "threads": 1,
+    "input_mib": 2.0770483016967773,
+    "median_seconds": 0.089415617,
+    "median_mib_s": 23.229145,
+    "median_rss_mib": 8.0234375,
+    "peak_rss_mib": 8.125
+  },
+  {
+    "rows": 100000,
+    "groups": 1000,
+    "padding": 0,
+    "threads": 2,
+    "input_mib": 2.0770483016967773,
+    "median_seconds": 0.057622711,
+    "median_mib_s": 36.045654,
+    "median_rss_mib": 8.9140625,
+    "peak_rss_mib": 9.01953125
+  },
+  {
+    "rows": 100000,
+    "groups": 1000,
+    "padding": 0,
+    "threads": 4,
+    "input_mib": 2.0770483016967773,
+    "median_seconds": 0.053867823,
+    "median_mib_s": 38.558237,
+    "median_rss_mib": 7.9921875,
+    "peak_rss_mib": 8.078125
+  },
+  {
+    "rows": 1000000,
+    "groups": 1000,
+    "padding": 0,
+    "threads": 1,
+    "input_mib": 21.72432804107666,
+    "median_seconds": 0.81455923,
+    "median_mib_s": 26.670041,
+    "median_rss_mib": 8.390625,
+    "peak_rss_mib": 8.39453125
+  },
+  {
+    "rows": 1000000,
+    "groups": 1000,
+    "padding": 0,
+    "threads": 2,
+    "input_mib": 21.72432804107666,
+    "median_seconds": 0.47096828,
+    "median_mib_s": 46.126946,
+    "median_rss_mib": 9.16796875,
+    "peak_rss_mib": 9.625
+  },
+  {
+    "rows": 1000000,
+    "groups": 1000,
+    "padding": 0,
+    "threads": 4,
+    "input_mib": 21.72432804107666,
+    "median_seconds": 0.50820529,
+    "median_mib_s": 42.747151,
+    "median_rss_mib": 7.9765625,
+    "peak_rss_mib": 8.08984375
+  },
+  {
+    "rows": 10000000,
+    "groups": 1000,
+    "padding": 0,
+    "threads": 1,
+    "input_mib": 226.78036403656006,
+    "median_seconds": 8.0695152,
+    "median_mib_s": 28.103344,
+    "median_rss_mib": 8.390625,
+    "peak_rss_mib": 8.515625
+  },
+  {
+    "rows": 10000000,
+    "groups": 1000,
+    "padding": 0,
+    "threads": 2,
+    "input_mib": 226.78036403656006,
+    "median_seconds": 4.6058513,
+    "median_mib_s": 49.237448,
+    "median_rss_mib": 9.3046875,
+    "peak_rss_mib": 9.39453125
+  },
+  {
+    "rows": 10000000,
+    "groups": 1000,
+    "padding": 0,
+    "threads": 4,
+    "input_mib": 226.78036403656006,
+    "median_seconds": 5.0057764,
+    "median_mib_s": 45.303734,
+    "median_rss_mib": 8.0625,
+    "peak_rss_mib": 10.49609375
+  },
+  {
+    "rows": 1000000,
+    "groups": 10,
+    "padding": 0,
+    "threads": 1,
+    "input_mib": 21.72432804107666,
+    "median_seconds": 0.80502043,
+    "median_mib_s": 26.986058,
+    "median_rss_mib": 8.2421875,
+    "peak_rss_mib": 8.359375
+  },
+  {
+    "rows": 1000000,
+    "groups": 10,
+    "padding": 0,
+    "threads": 2,
+    "input_mib": 21.72432804107666,
+    "median_seconds": 0.44956905,
+    "median_mib_s": 48.322561,
+    "median_rss_mib": 8.859375,
+    "peak_rss_mib": 9.1328125
+  },
+  {
+    "rows": 1000000,
+    "groups": 10,
+    "padding": 0,
+    "threads": 4,
+    "input_mib": 21.72432804107666,
+    "median_seconds": 0.50952668,
+    "median_mib_s": 42.636291,
+    "median_rss_mib": 7.078125,
+    "peak_rss_mib": 7.3125
+  },
+  {
+    "rows": 1000000,
+    "groups": 100000,
+    "padding": 0,
+    "threads": 1,
+    "input_mib": 21.72432804107666,
+    "median_seconds": 1.309008,
+    "median_mib_s": 16.596024,
+    "median_rss_mib": 34.76953125,
+    "peak_rss_mib": 34.890625
+  },
+  {
+    "rows": 1000000,
+    "groups": 100000,
+    "padding": 0,
+    "threads": 2,
+    "input_mib": 21.72432804107666,
+    "median_seconds": 0.84582013,
+    "median_mib_s": 25.684335,
+    "median_rss_mib": 49.8046875,
+    "peak_rss_mib": 49.8046875
+  },
+  {
+    "rows": 1000000,
+    "groups": 100000,
+    "padding": 0,
+    "threads": 4,
+    "input_mib": 21.72432804107666,
+    "median_seconds": 0.79196921,
+    "median_mib_s": 27.430773,
+    "median_rss_mib": 76.08203125,
+    "peak_rss_mib": 77.18359375
+  },
+  {
+    "rows": 10000000,
+    "groups": 1000,
+    "padding": 512,
+    "threads": 1,
+    "input_mib": 5109.59286403656,
+    "median_seconds": 32.492059,
+    "median_mib_s": 157.25667,
+    "median_rss_mib": 8.02734375,
+    "peak_rss_mib": 8.45703125
+  }
+]
